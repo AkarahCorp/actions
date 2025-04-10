@@ -1,6 +1,7 @@
 plugins {
     java
     id("xyz.jpenilla.run-paper") version "2.3.1"
+    id("maven-publish")
 }
 
 group = "dev.akarah"
@@ -66,5 +67,18 @@ tasks.named<ProcessResources>("processResources") {
     filteringCharset = "UTF-8"
     filesMatching("paper-plugin.yml") {
         expand(props)
+    }
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "dev.akarah"
+            artifactId = "actions"
+            version = "1.0-SNAPSHOT"
+
+            from(components["java"])
+        }
     }
 }
