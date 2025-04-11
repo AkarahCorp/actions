@@ -11,11 +11,13 @@ import dev.akarah.pluginpacks.multientry.MultiTypeRegistry;
 import dev.akarah.pluginpacks.multientry.TypeRegistry;
 import dev.akarah.pluginpacks.multientry.TypeRegistrySupported;
 
+import java.util.NoSuchElementException;
+
 public interface Action extends TypeRegistrySupported<ActionType> {
     PluginNamespace<Action> INSTANCE_NAMESPACE = PluginNamespace.create("action/instance");
     PluginNamespace<Action> REPOSITORY_NAMESPACE = PluginNamespace.create("action");
     TypeRegistry<Action, ActionType> REGISTRY = MultiTypeRegistry.getInstance().register(Action.INSTANCE_NAMESPACE, TypeRegistry.create(ActionType.CODEC));
-    Codec<Action> CODEC = MultiTypeRegistry.getInstance().lookup(INSTANCE_NAMESPACE).orElseThrow().codec();
+    Codec<Action> CODEC = MultiTypeRegistry.getInstance().lookup(INSTANCE_NAMESPACE).orElseThrow(() -> new NoSuchElementException("Actions were not registered in time, odd")).codec();
 
     static void registerAll() {
         register(SendMessage.TYPE, SendMessage.CODEC);

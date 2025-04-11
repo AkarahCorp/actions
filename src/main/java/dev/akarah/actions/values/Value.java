@@ -6,6 +6,7 @@ import com.mojang.serialization.codecs.PrimitiveCodec;
 import dev.akarah.actions.Environment;
 import dev.akarah.actions.values.casting.ComponentValue;
 import dev.akarah.actions.values.casting.DoubleValue;
+import dev.akarah.actions.values.casting.EntityValue;
 import dev.akarah.actions.values.casting.StringValue;
 import dev.akarah.actions.values.number.NumberConstant;
 import dev.akarah.actions.values.number.StringConstant;
@@ -30,6 +31,7 @@ public interface Value<T> extends TypeRegistrySupported<ValueType> {
     Codec<DoubleValue> DOUBLE = CODEC.xmap(DoubleValue::new, DoubleValue::inner);
     Codec<StringValue> STRING = CODEC.xmap(StringValue::new, StringValue::inner);
     Codec<ComponentValue> COMPONENT = CODEC.xmap(ComponentValue::new, ComponentValue::inner);
+    Codec<EntityValue> ENTITY = CODEC.xmap(EntityValue::new, EntityValue::inner);
 
 
     static void registerAll() {

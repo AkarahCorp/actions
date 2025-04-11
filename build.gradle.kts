@@ -25,7 +25,7 @@ repositories {
     }
 }
 
-val pluginPacksVer = "d7749ebf4f"
+val pluginPacksVer = "1af49d5b0b"
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")

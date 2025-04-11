@@ -1,9 +1,8 @@
 package dev.akarah.actions;
 
 import dev.akarah.actions.steps.Action;
-import dev.akarah.actions.steps.ActionCommand;
+import dev.akarah.actions.commands.ActionCommand;
 import dev.akarah.actions.values.Value;
-import dev.akarah.actions.values.ValueType;
 import dev.akarah.pluginpacks.data.PackRepository;
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;

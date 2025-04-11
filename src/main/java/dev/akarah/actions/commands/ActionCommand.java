@@ -1,9 +1,12 @@
-package dev.akarah.actions.steps;
+package dev.akarah.actions.commands;
 
 import dev.akarah.actions.Environment;
+import dev.akarah.actions.steps.Action;
+import dev.akarah.actions.values.Values;
 import dev.akarah.pluginpacks.commands.RegistryArgumentType;
 import dev.akarah.pluginpacks.data.PackRepository;
 import io.papermc.paper.command.brigadier.Commands;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 
 public class ActionCommand {
@@ -17,7 +20,7 @@ public class ActionCommand {
                                     if (ctx.getSource().getExecutor() instanceof Player p) {
                                         var action = ctx.getArgument("key", Action.class);
                                         var env = Environment.empty()
-                                                .setDefaultEntity(p);
+                                                .parameter(Values.DEFAULT_ENTITY_NAME, p);
                                         action.execute(env);
                                     }
                                     return 0;
