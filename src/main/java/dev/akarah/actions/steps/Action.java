@@ -5,6 +5,7 @@ import dev.akarah.actions.steps.generic.AllOf;
 import dev.akarah.actions.steps.generic.Drop;
 import dev.akarah.actions.steps.generic.Noop;
 import dev.akarah.actions.steps.generic.StoreLocal;
+import dev.akarah.actions.steps.java.CallMethodAction;
 import dev.akarah.actions.steps.java.SetField;
 import dev.akarah.actions.steps.player.SendMessage;
 import com.mojang.serialization.Codec;
@@ -33,6 +34,7 @@ public interface Action extends TypeRegistrySupported<ActionType> {
         register(AllOf.TYPE, AllOf.CODEC);
         register(StoreLocal.TYPE, StoreLocal.CODEC);
         register(SetField.TYPE, SetField.CODEC);
+        register(CallMethodAction.TYPE, CallMethodAction.CODEC);
     }
 
     @SuppressWarnings("unchecked")

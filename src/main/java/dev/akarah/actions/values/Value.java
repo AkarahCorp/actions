@@ -11,7 +11,7 @@ import dev.akarah.actions.values.casting.StringValue;
 import dev.akarah.actions.values.env.LocalVar;
 import dev.akarah.actions.values.env.Parameter;
 import dev.akarah.actions.values.java.CallConstructor;
-import dev.akarah.actions.values.java.CallMethod;
+import dev.akarah.actions.values.java.CallMethodValue;
 import dev.akarah.actions.values.java.GetField;
 import dev.akarah.actions.values.number.NumberConstant;
 import dev.akarah.actions.values.number.StringConstant;
@@ -44,7 +44,7 @@ public interface Value<T> extends TypeRegistrySupported<ValueType> {
         register(StringConstant.TYPE, StringConstant.CODEC);
         register(LocalVar.TYPE, LocalVar.CODEC);
         register(Parameter.TYPE, Parameter.CODEC);
-        register(CallMethod.TYPE, CallMethod.CODEC);
+        register(CallMethodValue.TYPE, CallMethodValue.CODEC);
         register(CallConstructor.TYPE, CallConstructor.CODEC);
         register(GetField.TYPE, GetField.CODEC);
     }
