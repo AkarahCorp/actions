@@ -1,6 +1,5 @@
-package dev.akarah.actions.commands;
+package dev.akarah.actions.steps;
 
-import dev.akarah.actions.Action;
 import dev.akarah.actions.Environment;
 import dev.akarah.pluginpacks.commands.RegistryArgumentType;
 import dev.akarah.pluginpacks.data.PackRepository;

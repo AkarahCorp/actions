@@ -1,8 +1,8 @@
-package dev.akarah.actions.player;
+package dev.akarah.actions.steps.player;
 
 import dev.akarah.pluginpacks.Codecs;
-import dev.akarah.actions.Action;
-import dev.akarah.actions.ActionType;
+import dev.akarah.actions.steps.Action;
+import dev.akarah.actions.steps.ActionType;
 import dev.akarah.actions.Environment;
 import com.mojang.serialization.MapCodec;
 import net.kyori.adventure.text.Component;

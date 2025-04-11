@@ -1,4 +1,4 @@
-package dev.akarah.actions;
+package dev.akarah.actions.steps;
 
 import com.mojang.serialization.Codec;
 import dev.akarah.pluginpacks.Codecs;

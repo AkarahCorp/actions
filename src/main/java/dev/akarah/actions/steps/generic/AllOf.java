@@ -1,7 +1,7 @@
-package dev.akarah.actions.generic;
+package dev.akarah.actions.steps.generic;
 
-import dev.akarah.actions.Action;
-import dev.akarah.actions.ActionType;
+import dev.akarah.actions.steps.Action;
+import dev.akarah.actions.steps.ActionType;
 import dev.akarah.actions.Environment;
 import com.mojang.serialization.MapCodec;
 import org.bukkit.NamespacedKey;

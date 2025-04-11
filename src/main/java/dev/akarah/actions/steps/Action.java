@@ -1,8 +1,9 @@
-package dev.akarah.actions;
+package dev.akarah.actions.steps;
 
-import dev.akarah.actions.generic.AllOf;
-import dev.akarah.actions.generic.Noop;
-import dev.akarah.actions.player.SendMessage;
+import dev.akarah.actions.Environment;
+import dev.akarah.actions.steps.generic.AllOf;
+import dev.akarah.actions.steps.generic.Noop;
+import dev.akarah.actions.steps.player.SendMessage;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import dev.akarah.pluginpacks.data.PluginNamespace;
