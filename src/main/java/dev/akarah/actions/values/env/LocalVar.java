@@ -9,7 +9,7 @@ import org.bukkit.NamespacedKey;
 
 public record LocalVar(NamespacedKey name) implements Value<Object> {
     public static MapCodec<LocalVar> CODEC = Codecs.NAMESPACED_KEY.fieldOf("name").xmap(LocalVar::new, LocalVar::name);
-    public static ValueType TYPE = new ValueType(NamespacedKey.fromString("minecraft:local"));
+    public static ValueType TYPE = new ValueType(NamespacedKey.fromString("minecraft:local/load"));
 
     @Override
     public Object get(Environment environment) {

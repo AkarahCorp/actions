@@ -8,6 +8,7 @@ import dev.akarah.actions.values.casting.ComponentValue;
 import dev.akarah.actions.values.casting.DoubleValue;
 import dev.akarah.actions.values.casting.EntityValue;
 import dev.akarah.actions.values.casting.StringValue;
+import dev.akarah.actions.values.env.LocalVar;
 import dev.akarah.actions.values.number.NumberConstant;
 import dev.akarah.actions.values.number.StringConstant;
 import dev.akarah.pluginpacks.data.PluginNamespace;
@@ -37,6 +38,7 @@ public interface Value<T> extends TypeRegistrySupported<ValueType> {
     static void registerAll() {
         register(NumberConstant.TYPE, NumberConstant.CODEC);
         register(StringConstant.TYPE, StringConstant.CODEC);
+        register(LocalVar.TYPE, LocalVar.CODEC);
     }
 
     @SuppressWarnings("unchecked")

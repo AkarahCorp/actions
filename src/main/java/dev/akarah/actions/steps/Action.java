@@ -3,6 +3,7 @@ package dev.akarah.actions.steps;
 import dev.akarah.actions.Environment;
 import dev.akarah.actions.steps.generic.AllOf;
 import dev.akarah.actions.steps.generic.Noop;
+import dev.akarah.actions.steps.generic.StoreLocal;
 import dev.akarah.actions.steps.player.SendMessage;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -23,6 +24,7 @@ public interface Action extends TypeRegistrySupported<ActionType> {
         register(SendMessage.TYPE, SendMessage.CODEC);
         register(Noop.TYPE, Noop.CODEC);
         register(AllOf.TYPE, AllOf.CODEC);
+        register(StoreLocal.TYPE, StoreLocal.CODEC);
     }
 
     @SuppressWarnings("unchecked")
