@@ -4,6 +4,7 @@ main: dev.akarah.actions.Main
 bootstrapper: dev.akarah.actions.Bootstrapper
 api-version: '1.21'
 prefix: actions
+folia-supported: true
 
 dependencies:
   bootstrap:

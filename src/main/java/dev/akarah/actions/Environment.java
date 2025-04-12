@@ -4,10 +4,11 @@ import dev.akarah.actions.values.Value;
 import org.bukkit.NamespacedKey;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Environment {
-    HashMap<NamespacedKey, Object> parameters = new HashMap<>();
-    HashMap<NamespacedKey, Object> localVariables = new HashMap<>();
+    ConcurrentHashMap<NamespacedKey, Object> parameters = new ConcurrentHashMap<>();
+    ConcurrentHashMap<NamespacedKey, Object> localVariables = new ConcurrentHashMap<>();
 
     public static Environment empty() {
         return new Environment();
